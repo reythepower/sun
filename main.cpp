@@ -1,3 +1,4 @@
+//this file is edited
 #include <iostream>
 #include <conio.h>
 #include "Array_h.h"
@@ -5,7 +6,7 @@
 
 using namespace std;
 
-char* CONTINUE = "Нажмите любую клавишу для продолжения, ESC - выход!";
+char* CONTINUE = "ГЌГ Г¦Г¬ГЁГІГҐ Г«ГѕГЎГіГѕ ГЄГ«Г ГўГЁГёГі Г¤Г«Гї ГЇГ°Г®Г¤Г®Г«Г¦ГҐГ­ГЁГї, ESC - ГўГ»ГµГ®Г¤!";
 
 template <class TypeArray>
 int Array <TypeArray>::arrayCount=0;
@@ -14,12 +15,12 @@ void input(int& k, const char* n)
 {
 	while (true)
 	{
-		cout<<"Введите размер вектора "<<n<<": ";
+		cout<<"Г‚ГўГҐГ¤ГЁГІГҐ Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г  "<<n<<": ";
 		ifstream inp("CON");
 		inp>>k;
 		if (inp.fail() || inp.bad() )
-			cout<<"Введенные данные неверны!!!!"<<endl;
-		else if ( k<1 || k>1000) cout<<"Неверный размер массива!!!"<<endl;
+			cout<<"Г‚ГўГҐГ¤ГҐГ­Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ Г­ГҐГўГҐГ°Г­Г»!!!!"<<endl;
+		else if ( k<1 || k>1000) cout<<"ГЌГҐГўГҐГ°Г­Г»Г© Г°Г Г§Г¬ГҐГ° Г¬Г Г±Г±ГЁГўГ !!!"<<endl;
 		else break;
 	}
 }
@@ -34,28 +35,28 @@ void main()
 	for (;;)
 		{
 			cout<<"<======test======> #"<< ++t <<endl;
-			cout<<"Вариант 42:"<<endl;
-			cout<<"   1) a/b - a, если a<b"<<endl;
-			cout<<"X= 2) -b ,если a=b"<<endl;
-			cout<<"   3) (a*b-8)/a ,если a>b"<<endl;
+			cout<<"Г‚Г Г°ГЁГ Г­ГІ 42:"<<endl;
+			cout<<"   1) a/b - a, ГҐГ±Г«ГЁ a<b"<<endl;
+			cout<<"X= 2) -b ,ГҐГ±Г«ГЁ a=b"<<endl;
+			cout<<"   3) (a*b-8)/a ,ГҐГ±Г«ГЁ a>b"<<endl;
 			
 			try{
-				cout <<"Количество созданных целочисленных массивов = " 
+				cout <<"ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±Г®Г§Г¤Г Г­Г­Г»Гµ Г¶ГҐГ«Г®Г·ГЁГ±Г«ГҐГ­Г­Г»Гµ Г¬Г Г±Г±ГЁГўГ®Гў = " 
 					<< Array<int>::getArrayCount() <<endl;
 				input(asize, "a");
 				input(bsize, "b");
-				//*** создание челочисленных массивов ***
+				//*** Г±Г®Г§Г¤Г Г­ГЁГҐ Г·ГҐГ«Г®Г·ГЁГ±Г«ГҐГ­Г­Г»Гµ Г¬Г Г±Г±ГЁГўГ®Гў ***
 				Array<int> a(asize), b(bsize), X;
-				cout <<"А теперь количество созданных массивов = " 
+				cout <<"ГЂ ГІГҐГЇГҐГ°Гј ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±Г®Г§Г¤Г Г­Г­Г»Гµ Г¬Г Г±Г±ГЁГўГ®Гў = " 
 					<< Array<int>::getArrayCount()<< endl;
 				if (asize <= 10)
 				{
-					cout<<"Ввод элементов массива а: "<<endl;
+					cout<<"Г‚ГўГ®Г¤ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў Г¬Г Г±Г±ГЁГўГ  Г : "<<endl;
 					cin>>a;
 				}
 				if (bsize <= 10)
 				{
-					cout<<"Ввод элементов массива b: "<<endl;
+					cout<<"Г‚ГўГ®Г¤ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў Г¬Г Г±Г±ГЁГўГ  b: "<<endl;
 					cin>>b;
 				}
 				if (a==b)
@@ -91,29 +92,29 @@ void main()
 					X -= 8;
 				#ifdef _DEBUG
 					cout << X << endl;
-					cout<<"X= (a*b-8) / а "<<endl;
+					cout<<"X= (a*b-8) / Г  "<<endl;
 				#endif // _DEBUG
 					X = X/a;
 				}
-				cout << "Результат X: " << X << endl;
+				cout << "ГђГҐГ§ГіГ«ГјГІГ ГІ X: " << X << endl;
 				
-				cout <<"Количество созданных вещественных массивов = " 
+				cout <<"ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±Г®Г§Г¤Г Г­Г­Г»Гµ ГўГҐГ№ГҐГ±ГІГўГҐГ­Г­Г»Гµ Г¬Г Г±Г±ГЁГўГ®Гў = " 
 					<< Array<double>::getArrayCount() <<endl;
 				Array<double>::getArrayCount();
 				asize=0; bsize=0;
 				input(asize, "a");
 				input(bsize, "b");
 				Array<double> aa(asize), bb(bsize), XX;
-				cout <<"А теперь количество созданных массивов = " 
+				cout <<"ГЂ ГІГҐГЇГҐГ°Гј ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±Г®Г§Г¤Г Г­Г­Г»Гµ Г¬Г Г±Г±ГЁГўГ®Гў = " 
 					<< Array<double>::getArrayCount()<< endl;
 				if (asize <= 10)
 				{
-					cout<<"Ввод элементов массива а: "<<endl;
+					cout<<"Г‚ГўГ®Г¤ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў Г¬Г Г±Г±ГЁГўГ  Г : "<<endl;
 					cin>>aa;
 				}
 				if (bsize <= 10)
 				{
-					cout<<"Ввод элементов массива b: "<<endl;
+					cout<<"Г‚ГўГ®Г¤ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў Г¬Г Г±Г±ГЁГўГ  b: "<<endl;
 					cin>>bb;
 				}
 				if (aa==bb)
@@ -149,21 +150,21 @@ void main()
 					XX -= 8;
 				#ifdef _DEBUG
 					cout << XX << endl;
-					cout<<"X= (a*b-8) / а "<<endl;
+					cout<<"X= (a*b-8) / Г  "<<endl;
 				#endif // _DEBUG
 					XX = XX/aa;
 				}
-				cout << "Результат X: " << XX << endl;
+				cout << "ГђГҐГ§ГіГ«ГјГІГ ГІ X: " << XX << endl;
 
 				cout<<CONTINUE<<endl;
 			}
 			catch(char* exc)
 			{
-				cout<<"Ошибка: Исключение: "<<exc<< endl;
+				cout<<"ГЋГёГЁГЎГЄГ : Г€Г±ГЄГ«ГѕГ·ГҐГ­ГЁГҐ: "<<exc<< endl;
 			}
 			catch(...)
 			{
-				cout<<"Ошибка: Обработка непредвиденной ситуации!"<<endl;
+				cout<<"ГЋГёГЁГЎГЄГ : ГЋГЎГ°Г ГЎГ®ГІГЄГ  Г­ГҐГЇГ°ГҐГ¤ГўГЁГ¤ГҐГ­Г­Г®Г© Г±ГЁГІГіГ Г¶ГЁГЁ!"<<endl;
 			}
 			if (_getch() == 27) return;
 		}
